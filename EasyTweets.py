@@ -39,7 +39,7 @@ def get_url(offset,mintime):
     url = ("http://otter.topsy.com/search.js?callback=jQuery18309681285265833139_1440320936553&"
            "q=baltimore+riot+OR+baltimore+protest+OR+freddie+gray"
            "&type=tweet&offset="+str(offset)+"&perpage=100&mintime="+str(mintime)+"&"
-           "maxtime=1429562860&sort_method=-date&call_timestamp=1440320937774"
+           "maxtime=1430092836&sort_method=-date&call_timestamp=1440320937774"
            "&apikey=09C43A9B270A470B8EB8F2946A9369F3&_=1440320938936")
     return url
 
