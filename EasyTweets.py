@@ -37,7 +37,7 @@ def get_json(url):
 
 def get_url(offset,mintime):
     url = ("http://otter.topsy.com/search.js?callback=jQuery18309681285265833139_1440320936553&"
-           "q=baltimore+OR+baltimore+riot+OR+baltimore+riots+OR+baltimore+protest+OR+freddie+gray"
+           "q=baltimore+OR+freddie+gray"
            "&type=tweet&offset="+str(offset)+"&perpage=100&mintime="+str(mintime)+"&"
            "maxtime=1430092836&sort_method=-date&call_timestamp=1440320937774"
            "&apikey=09C43A9B270A470B8EB8F2946A9369F3&_=1440320938936")
@@ -47,9 +47,9 @@ def get_url(offset,mintime):
 if __name__ == "__main__":
 
     keywords = "baltimore OR baltimore riot OR baltimore riots OR baltimore protest OR freddie gray"
-    start_time = 1428818420    # 12-04-2015 06:00
+    #start_time = 1428818420    # 12-04-2015 06:00
     end_time = 1430092836      # 26-04-2015 23:59
-
+    start_time = 1429152154
 
     offset = 00
     offset_list = []
@@ -71,7 +71,7 @@ if __name__ == "__main__":
 
      for offset in offset_list:
          #print offset
-
+         time.sleep(1)  
          url = get_url(offset,min_time)
          data = get_json(url)
 
@@ -90,8 +90,8 @@ if __name__ == "__main__":
              #print tweet_id_set
              wr.writerows([tweet_id_set])
              big_row.append(tweet_id_set)
-
-     new_tweet_id_set_len = len(big_row)
+             #print tweet_id_set 
+             new_tweet_id_set_len = len(big_row)
      if new_tweet_id_set_len == big_row_len :
          break
      big_row_len = new_tweet_id_set_len
