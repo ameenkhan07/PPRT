@@ -46,7 +46,7 @@ def get_url(offset,mintime):
 
 if __name__ == "__main__":
 
-    keywords = "baltimore OR baltimore riot OR baltimore riots OR baltimore protest OR freddie gray"
+    keywords = "baltimore OR freddie gray"
     #start_time = 1428818420    # 12-04-2015 06:00
     end_time = 1430092836      # 26-04-2015 23:59
     start_time = 1429152154
@@ -71,7 +71,7 @@ if __name__ == "__main__":
 
      for offset in offset_list:
          #print offset
-         time.sleep(1)  
+         time.sleep(1)
          url = get_url(offset,min_time)
          data = get_json(url)
 
