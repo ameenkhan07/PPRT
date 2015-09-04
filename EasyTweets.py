@@ -10,7 +10,7 @@ import json
 import csv
 import time
 
-fl = open("London_tweets.csv","w")
+fl = open("Ferguson_tweets.csv","w")
 wr = csv.writer(fl)
 
 def is_blank(cont):
@@ -37,20 +37,19 @@ def get_json(url):
 
 def get_url(offset,mintime):
     url = ("http://otter.topsy.com/search.js?callback=jQuery18307494695240166038_1441283727371&"
-           "q=mark+duggan+OR+london"
+           "q=michael+brown+OR+ferguson"
            "&type=tweet&offset="+str(offset)+"&perpage=100&mintime="+str(mintime)+"&"
-           "maxtime=1312657260&sort_method=-date&call_timestamp=1441283728668"
+           "maxtime=1407704400&sort_method=-date&call_timestamp=1441283728668"
            "&apikey=09C43A9B270A470B8EB8F2946A9369F3&_=1440320938936")
     return url
 
 
 if __name__ == "__main__":
 
-    keywords = "london OR mark duggan"
-    #Baltimore start_time = 1428818420    # 12-04-2015 06:00
-    #Baltimore end_time = 1430092836      # 26-04-2015 23:59
-    start_time = 1312437600
-    end_time = 1312657260
+    keywords = "ferguson OR michael brown"
+
+    start_time = 1407564000
+    end_time = 1407704400
 
     offset = 00
     offset_list = []
