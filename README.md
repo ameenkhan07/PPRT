@@ -1,2 +1,4 @@
-# PPRT
-Minor Project , Data Mining on historical Twitter Data
+# Prediction of Riots using Twitter
+Minor Project,
+Department of Computer Engineering,
+Jamia Millia Islamia
